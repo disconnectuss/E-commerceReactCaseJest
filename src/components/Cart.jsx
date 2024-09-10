@@ -14,7 +14,7 @@ const Cart = () => {
     dispatch(incrementQuantity({ id }));
   };
 
-  const handleDecrement = (id, quantity) => {
+  const handleDecrement = (id) => {
     dispatch(decrementQuantity({ id }));
   };
 
@@ -65,7 +65,7 @@ const Cart = () => {
       </h2>
       <div className="shadow-md p-2">
         <h2 className="total text-bold text-secondary mb-3">
-          Total Price:{" "}
+          Total Price:
           <span className="text-primary text-semibold">
             {totalPrice.toLocaleString()} ₺
           </span>

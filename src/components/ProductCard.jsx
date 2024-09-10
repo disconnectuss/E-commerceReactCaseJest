@@ -1,25 +1,24 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/slices/cartSlice";
-import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const handleAddToCart = () => {
     dispatch(addToCart(product));
   };
 
   const handleCardClick = () => {
-    // Navigate to the product detail page using the product's id
     navigate(`/product/${product.id}`);
   };
 
   return (
     <div
-      className="bg-white p-4 m-5 rounded-lg shadow-md w-[220px] cursor-pointer"
-      onClick={handleCardClick} // Add onClick event to the entire card
+      className="bg-white p-4 m-5 rounded-lg shadow-md w-[220px] h-[400px] cursor-pointer"
+      onClick={handleCardClick}
     >
       <div className="h-48 bg-gray-300 mb-4">
         {product.image ? (
@@ -40,7 +39,7 @@ const ProductCard = ({ product }) => {
       <button
         className="text-white px-4 py-2 rounded-lg bg-primary hover:scale-95"
         onClick={(e) => {
-          e.stopPropagation(); // Prevent click event from propagating to the card
+          e.stopPropagation();
           handleAddToCart();
         }}
       >

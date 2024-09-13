@@ -2,10 +2,6 @@
 
 - This application is built using React Vite for fast and optimized development, with Tailwind CSS for utility-first styling. Unit testing is integrated using Jest, ensuring component functionality and reliability across the application.
 
-# Preview
-
-https://github.com/user-attachments/assets/057ddf3e-bd55-433b-964f-0c7e72e8267d
-
 - Key features of the app include:
 
 * Search Functionality: A search bar in the header enables users to filter products dynamically.
